@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginMVVM.View.Login.CriarUsuario"
+             Title="CriarUsuario">
+    
+    <StackLayout Background="White">
+        <Label Text="Bem-VIndo" />
+        <Frame VerticalOptions="EndAndExpand" BackgroundColor="LightGrey" CornerRadius="50" Margin="30,0,30,160" BorderColor="Grey">
+            <StackLayout>
+                <Entry 
+                    Placeholder="Digite seu nome completo"
+                    Keyboard="Text" 
+                    BackgroundColor="LightGrey" 
+                    TextColor="Black" 
+                    PlaceholderColor="Black" 
+                    Margin="30,100,30,0"
+                    Text="{Binding CriarUsuarioModel.NomeCompleto, Mode=TwoWay}"/>
+
+                <Entry 
+                    Placeholder="Digite sua idade"
+                    Keyboard="Text" 
+                    BackgroundColor="LightGrey" 
+                    TextColor="Black" 
+                    PlaceholderColor="Black" 
+                    Margin="30,100,30,0"
+                    Text="{Binding CriarUsuarioModel.Idade, Mode=TwoWay}"/>
+
+                <Entry 
+                    Placeholder="Digite seu CPF"
+                    Keyboard="Text" 
+                    BackgroundColor="LightGrey" 
+                    TextColor="Black" 
+                    PlaceholderColor="Black" 
+                    Margin="30,100,30,0"
+                    Text="{Binding CriarUsuarioModel.CPF, Mode=TwoWay}"/>
+
+                <Entry 
+                    Placeholder="Digite seu RG"
+                    Keyboard="Text" 
+                    BackgroundColor="LightGrey" 
+                    TextColor="Black" 
+                    PlaceholderColor="Black" 
+                    Margin="30,100,30,0"
+                    Text="{Binding CriarUsuarioModel.RG, Mode=TwoWay}"/>
+
+
+                <Entry 
+                    Placeholder="Digite o Login"
+                    Keyboard="Text" 
+                    BackgroundColor="LightGrey" 
+                    TextColor="Black" 
+                    PlaceholderColor="Black" 
+                    Margin="30,20,30,80"
+                    Text="{Binding CriarUsuarioModel.Logins.Login, Mode=TwoWay}"/>
+
+                <Entry 
+                    Placeholder="Digite a Senha"
+                    Keyboard="Text" 
+                    BackgroundColor="LightGrey" 
+                    TextColor="Black" 
+                    PlaceholderColor="Black" 
+                    Margin="30,20,30,80"
+                    Text="{Binding CriarUsuarioModel.Logins.Senha, Mode=TwoWay}"/>
+
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Margin="0,10,0,100">
+                    <Button
+                        Text="    Entrar    "
+                        Margin="0,0,30,0"
+                        Command="{Binding BtnEntrar}"/>
+                    <Button
+                        Text="Criar Usuario"
+                        Command="{Binding BtnCriarUsuario}"/>
+                </HorizontalStackLayout>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
